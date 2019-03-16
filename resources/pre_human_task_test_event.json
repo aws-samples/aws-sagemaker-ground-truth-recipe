@@ -1,0 +1,7 @@
+{
+   "version":"2018-10-06",
+   "labelingJobArn":"arn:aws:sagemaker:us-east-1:111111111111:labeling-job/test-labeling-job",
+   "dataObject":{
+      "source-ref":"s3://test-bucket/test-image.jpg"
+   }
+}

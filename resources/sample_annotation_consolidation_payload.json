@@ -1,0 +1,30 @@
+[
+  {
+    "datasetObjectId": "0",
+    "dataObject": {
+      "s3Uri": "s3://test-bucket/test-image1.jpg"
+    },
+    "annotations": [
+      {
+        "workerId": "private.us-east-1.CYUQXZT3LFXJIUFCZMZ6HC2KFM",
+        "annotationData": {
+          "content": "{\"annotatedResult\":{\"boundingBoxes\":[{\"height\":128,\"label\":\"Red\",\"left\":116,\"top\":283,\"width\":137},{\"height\":141,\"label\":\"Green\",\"left\":418,\"top\":281,\"width\":138}],\"inputImageProperties\":{\"height\":432,\"width\":640}}}"
+        }
+      }
+    ]
+  },
+  {
+    "datasetObjectId": "2",
+    "dataObject": {
+      "s3Uri": "s3://test-bucket/test-image2.jpg"
+    },
+    "annotations": [
+      {
+        "workerId": "private.us-east-1.CYUQXZT3LFXJIUFCZMZ6HC2KFM",
+        "annotationData": {
+          "content": "{\"annotatedResult\":{\"boundingBoxes\":[{\"height\":192,\"label\":\"Green\",\"left\":76,\"top\":485,\"width\":182},{\"height\":186,\"label\":\"Red\",\"left\":414,\"top\":516,\"width\":205}],\"inputImageProperties\":{\"height\":1000,\"width\":1000}}}"
+        }
+      }
+    ]
+  }
+]

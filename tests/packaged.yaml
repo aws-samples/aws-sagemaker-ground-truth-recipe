@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'SAM Template for sample AWS SageMaker Ground Truth lambdas for Custom
+  Labeling Jobs
+
+  '
+Globals:
+  Function:
+    Timeout: 30
+Outputs:
+  GtRecipeAnnotationConsolidationFunction:
+    Description: SageMaker GroundTruth Sample Annotation Consolidation (post-processing)
+      Lambda.
+    Value:
+      Fn::GetAtt:
+      - GtRecipeAnnotationConsolidationFunction
+      - Arn
+  GtRecipePreHumanTaskFunction:
+    Description: SageMaker GroundTruth Sample PreHumanTask (pre-processing) Lambda.
+    Value:
+      Fn::GetAtt:
+      - GtRecipePreHumanTaskFunction
+      - Arn
+  GtRecipePreHumanTaskFunctionIamRole:
+    Description: Implicit IAM Role created for GtRecipeAnnotationConsolidationFunction
+    Value:
+      Fn::GetAtt:
+      - GtRecipeAnnotationConsolidationFunctionRole
+      - Arn
+Resources:
+  GtRecipeAnnotationConsolidationFunction:
+    Properties:
+      CodeUri: s3://gt-recipe/211a753f38b4a22533eeb4797fdae938
+      Handler: annotation_consolidation_lambda.lambda_handler
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+  GtRecipePreHumanTaskFunction:
+    Properties:
+      CodeUri: s3://gt-recipe/211a753f38b4a22533eeb4797fdae938
+      Handler: pre_human_task_lambda.lambda_handler
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

@@ -1,0 +1,10 @@
+{
+   "version":"2018-10-06",
+   "labelingJobArn":"arn:aws:sagemaker:us-east-1:111111111111:labeling-job/test-labeling-job",
+   "payload":{
+      "s3Uri":"s3://test-bucket/sample_annotation_consolidation_payload.json"
+   },
+   "labelAttributeName":"test-label-attribute",
+   "roleArn":"arn:aws:iam::111111111111:role/service-role/test-gt-role",
+   "outputConfig":"s3://test-bucket/test-image.jpg"
+}
