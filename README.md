@@ -1,6 +1,6 @@
 # SageMaker Ground Truth Recipe
 
-This is a sample template for AWS SageMaker GroundTruth Lambdas to be used Custom Labeling Jobs
+Pre-labeling and Post-labeling lambdas for custom labeling jobs.
 
 ## Requirements
 
