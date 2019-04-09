@@ -1,6 +1,8 @@
 # SageMaker Ground Truth Recipe
 
-Pre-labeling and Post-labeling lambdas for custom labeling jobs.
+Pre-labeling and Post-labeling lambdas for custom labeling jobs. If you want to just use these lambdas, you can directly import "aws-sagemaker-ground-truth-recipe" in your AWS console. You can also modify code in your AWS console. 
+
+If you want to use Serveless Application Model toolkit to modify and develop the code further, keep reading.
 
 ## Requirements
 
