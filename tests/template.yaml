@@ -15,14 +15,14 @@ Resources:
         Properties:
             CodeUri: aws_sagemaker_ground_truth_sample_lambda/
             Handler: pre_human_task_lambda.lambda_handler
-            Runtime: python3.6
+            Runtime: python3.9
 
     GtRecipeAnnotationConsolidationFunction:
         Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
         Properties:
             CodeUri: aws_sagemaker_ground_truth_sample_lambda/
             Handler: annotation_consolidation_lambda.lambda_handler
-            Runtime: python3.6
+            Runtime: python3.9
 
 Outputs:
 

@@ -31,12 +31,12 @@ Resources:
     Properties:
       CodeUri: s3://gt-recipe/211a753f38b4a22533eeb4797fdae938
       Handler: annotation_consolidation_lambda.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
     Type: AWS::Serverless::Function
   GtRecipePreHumanTaskFunction:
     Properties:
       CodeUri: s3://gt-recipe/211a753f38b4a22533eeb4797fdae938
       Handler: pre_human_task_lambda.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.9
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31
