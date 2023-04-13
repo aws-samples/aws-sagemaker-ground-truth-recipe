@@ -43,7 +43,7 @@ def lambda_handler(event, context):
            "taskInput":{
               "taskObject":src_url_http
            },
-           "humanAnnotationRequired":"true"
+           "isHumanAnnotationRequired":"true"
         }
 
 
@@ -70,13 +70,13 @@ def lambda_handler(event, context):
         "taskInput": {
             "taskObject": task_object
         },
-        "humanAnnotationRequired": "true"
+        "isHumanAnnotationRequired": "true"
     }
 
     print(output)
     # If neither source nor source-ref specified, mark the annotation failed
     if task_object is None:
         print(" Failed to pre-process {} !".format(event["labelingJobArn"]))
-        output["humanAnnotationRequired"] = "false"
+        output["isHumanAnnotationRequired"] = "false"
 
     return output
